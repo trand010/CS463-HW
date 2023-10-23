@@ -10,7 +10,60 @@
   <body>
     <main>
       <h1>Exercise 04 - Form</h1>
-      <!-- Add your code here -->
+      <div class="exercise04-form-container">
+        <form class="sign-up-form">
+          <h2>Sign Up Form</h2>
+          <p>Fill up the items in the form below.</p>
+          <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div class="input-group">
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" name="dob" />
+          </div>
+          <fieldset>
+            <legend>Preferred Pronouns</legend>
+            <input type="radio" id="sheher" name="pronouns" value="sheher" />
+            <label class="radio-label" for="sheher">She/her</label>
+            <br />
+            <input type="radio" id="hehim" name="pronouns" value="hehim" />
+            <label class="radio-label" for="hehim">He/him</label>
+            <br />
+            <input
+              type="radio"
+              id="theythem"
+              name="pronouns"
+              value="theythem"
+            />
+            <label class="radio-label" for="theythem">They/them</label>
+            <br />
+            <input
+              type="radio"
+              id="noresponse"
+              name="pronouns"
+              value="noresponse"
+            />
+            <label class="radio-label" for="noresponse"
+              >I prefer not to say</label
+            >
+          </fieldset>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </div>
     </main>
   </body>
 </html>

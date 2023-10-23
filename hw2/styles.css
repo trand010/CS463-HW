@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -27,9 +27,237 @@ form {
 }
 
 /* Code for exercise 01-navbar */
+.custom-nav {
+  background-color: var(--black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.custom-nav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 25px 30px;
+  display: block;
+}
+
+.custom-nav ul li a:hover {
+  background-color: var(--violetred);
+  transition: background-color 0.3s ease;
+}
+
+.exercise1-title {
+  margin-top: 100px;
+}
 
 /* Code for exercise 02-cards */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.custom-card {
+  border: 1px solid var(--gray);
+  padding: 20px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  width: calc(100% / 3 - 20px);
+  margin: 5px;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.custom-card-image {
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.custom-card h2 {
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.custom-text-container {
+  text-align: left;
+}
+
+.custom-info-button {
+  display: block;
+  padding: 10px;
+  color: var(--white);
+  background-color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-info-button:hover {
+  background-color: var(--violetred);
+}
+
+/* Media query for responsive design */
+@media (max-width: 720px) {
+  .card-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .custom-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 5px auto;
+  }
+}
 
 /* Code for exercise 03-table */
+.custom-table {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 100px;
+}
+
+.custom-table th,
+.custom-table td {
+  width: 25%;
+  border: 1px solid var(--black);
+  padding: 10px;
+  text-align: center;
+}
+
+.custom-table thead th {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.custom-table tbody tr:hover {
+  background-color: var(--orange);
+}
+
+.custom-table tbody td:first-child {
+  background-color: var(--violetred);
+  color: var(--white);
+}
+
+.custom-table tbody td:not(:first-child) {
+  text-align: left;
+  padding-left: 15px;
+}
 
 /* Code for exercise 04-form */
+.sign-up-form {
+  width: 450px;
+  padding: 20px;
+  border: 1px solid var(--black);
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.sign-up-form h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.sign-up-form p {
+  margin-top: 5px;
+  color: var(--gray);
+}
+
+.sign-up-form label {
+  display: block;
+  margin: 3px;
+  font-weight: bold;
+}
+
+.sign-up-form label.radio-label {
+  font-weight: normal;
+}
+
+.sign-up-form input[type="text"],
+.sign-up-form input[type="email"],
+.sign-up-form input[type="password"],
+.sign-up-form input[type="date"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--black);
+  margin-bottom: 8px;
+}
+
+.sign-up-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 20px 0px;
+}
+
+.sign-up-form fieldset label {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.sign-up-form legend {
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.sign-up-form button[type="submit"] {
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 16px;
+}
+
+.sign-up-form button[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+}
+
+.sign-up-form button[type="submit"]:hover {
+  background-color: var(--violetred);
+}
+
+.sign-up-form button[type="reset"]:hover {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.sign-up-form label.radio-label {
+  display: inline-block;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.input-group label {
+  margin: 0;
+  width: 60%;
+}
