@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -34,20 +34,215 @@ form {
 }
 
 /* Code for exercise 01-hello */
+.hello-profile-image {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.hello-bio {
+  font-size: 1em;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.hello-bio strong {
+  font-weight: bold;
+}
 
 /* Code for exercise 02-form */
+.sign-up-form {
+  width: 450px;
+  padding: 20px;
+  border: 1px solid var(--black);
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.sign-up-form h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.sign-up-form p {
+  margin-top: 5px;
+  color: var(--gray);
+}
+
+.sign-up-form label {
+  display: block;
+  margin: 3px;
+  font-weight: bold;
+}
+
+.sign-up-form label.radio-label {
+  font-weight: normal;
+}
+
+.sign-up-form input[type="text"],
+.sign-up-form input[type="email"],
+.sign-up-form input[type="password"],
+.sign-up-form input[type="date"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid var(--black);
+  margin-bottom: 8px;
+}
+
+.sign-up-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 20px 0px;
+}
+
+.sign-up-form fieldset label {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.sign-up-form legend {
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.sign-up-form button[type="submit"] {
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 16px;
+}
+
+.sign-up-form button[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--black);
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+}
+
+.sign-up-form button[type="submit"]:hover {
+  background-color: var(--violetred);
+}
+
+.sign-up-form button[type="reset"]:hover {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.sign-up-form label.radio-label {
+  display: inline-block;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.input-group label {
+  margin: 0;
+  width: 60%;
+}
 
 /* Code for exercise 03-starships */
+.starship {
+  background-color: var(--white);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 1fr;
+  max-width: 480px;
+  height: auto;
+}
 
-.btn-group {
-  margin: auto;
-  width: 400px;
+.starship-name {
+  font-weight: bold;
+}
+
+.starship-header {
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  grid-column: 1 / -1;
+}
+
+.starship-header .price {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.starship-body {
+  display: grid;
+  grid-template-columns: 2fr 1px 2fr;
+  align-items: center;
+  grid-column: 1 / 3;
+}
+
+.starship-manufacturer {
+  padding: 1rem;
+  grid-column: 1 / 3;
+}
+
+.starship-detail {
+  padding: 1rem;
+  text-align: center;
+}
+
+.starship-detail .value {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  height: 80%;
+  width: 1px;
+  background-color: var(--gray);
+  align-self: center;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
 }
 
 .btn {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
   width: 80px;
-  padding: 10px;
+}
+
+.btn-active {
+  background-color: var(--violetred);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
